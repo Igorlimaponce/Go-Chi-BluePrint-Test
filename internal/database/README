@@ -1,0 +1,36 @@
+Acessar o banco pelo terminal após o docker estar rodando
+
+liste os containers primeiro:
+
+docker ps
+
+Nome do container = go-blueprint-mark1-psql_bp-1
+Nome do banco = blueprint
+
+docker exec -it go-blueprint-mark1-psql_bp-1 psql -U postgres -d blueprint
+
+// agora estaremos dentro do post
+
+
+Comandos úteis no psql:
+
+-- Listar todas as tabelas
+\dt
+
+-- Descrever estrutura de uma tabela
+\d nome_da_tabela
+
+-- Listar bancos de dados
+\l
+
+-- Sair do psql
+\q
+
+-- Executar query
+SELECT * FROM sua_tabela;
+
+-- Ver todos os usuários/roles
+\du
+
+-- Ou com mais detalhes
+\du+
